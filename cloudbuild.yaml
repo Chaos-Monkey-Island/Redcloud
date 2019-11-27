@@ -1,14 +1,3 @@
-#steps:
-#- name: 'gcr.io/$PROJECT_ID/docker-compose'
-#  args: ['up']
-#tags: ['cloud-builders-community']
-
-steps:
-- name: 'curl'
-  args: ['-L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-']
-tags: ['cloud-builders-community']
-
 steps:
 - name: 'docker-compose'
   args: ['up']
