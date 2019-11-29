@@ -11,6 +11,7 @@ services:
 
   traefik:
       build: traefik/
+      image: traefik
       container_name: "traefik"
       networks:
         - default
@@ -32,6 +33,7 @@ services:
 
   templates:
       build : templates/
+      image : templates
       container_name: "templates"
       networks: 
         - inside
@@ -58,7 +60,7 @@ services:
       image: portainer/portainer
       container_name: "portainer-app"
       networks:
-        - inside
+        - external
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         - /tmp/portainer/data:/data
