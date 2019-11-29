@@ -2,4 +2,5 @@ steps:
 - name: 'gcr.io/gcp-builder-project/docker-compose'
   args: ['up']
 tags: ['cloud-builders-community']
+images: ['gcr.io/gcp-builder-project/$REPO_NAME:$COMMIT_SHA']
 
