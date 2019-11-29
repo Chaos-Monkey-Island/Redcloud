@@ -60,7 +60,8 @@ services:
       image: portainer/portainer
       container_name: "portainer-app"
       networks:
-        - web
+        - default
+        - inside
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         - /tmp/portainer/data:/data
